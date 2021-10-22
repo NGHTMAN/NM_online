@@ -1,0 +1,66 @@
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar navbar-expand-lg navbar-dark{
+background: linear-gradient(90deg, rgba(148,76,189,1) 0%, rgba(57,62,91,1) 50%, rgba(131,234,255,1) 100%);
+}
+.card-title{
+
+}
+
+.card{
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+body {
+  background-image: url(logoNM.jpg);
+  background-color: rgba(0, 0, 0, 1);
+
+}
+
+
+header h1 a {
+  color: cyan;
+  text-decoration: none;
+}
+
+.nav-left {
+  margin-right: auto;
+}
+
+.nav-right {
+  display: flex;
+  padding-top: 2rem;
+}
+.card-text h5{
+margin-bottom: 2rem;
+}
+
+.post-entry {
+  margin-bottom: 2rem;
+}
+
+.post-entry h2 {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.post-entry h2 a,
+.post-entry h2 a:visited {
+  color: pink;
+  text-decoration: none;
+border-style: double;
+text-align: center;
+}
+
+.post-detail-entry h2 {
+   color: pink;
+
+}
+
+.post-detail-entry p {
+  color: black;
+}

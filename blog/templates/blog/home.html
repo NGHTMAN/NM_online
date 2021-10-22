@@ -1,0 +1,17 @@
+<!-- templates/blog/home.html -->
+{% extends 'blog/main.html' %}
+
+{% block content %}
+
+  {% for post in object_list %}
+    <div class="post-entry">
+    </div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><a href="{% url 'blog:post_detail' post.pk %}">{{ post.title }}</a></h5>
+    <p class="card-text">{{ post.body }}</p>
+    <a href="{% url 'blog:post_detail' post.pk %}" class="btn btn-primary">Read next</a>
+  </div>
+</div>
+  {% endfor %}
+{% endblock content %}

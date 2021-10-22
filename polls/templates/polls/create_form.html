@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block content %}
+        <form action=" " method="post">{% csrf_token %}
+        <label for="question_name"> <font color="white">New question name: </font></label>
+        <input id="question_name" type="text" name="question_name" value="">
+        <input type="submit" value="OK">
+        </form>
+{% endblock content %}

@@ -1,0 +1,16 @@
+<!-- templates/post_detail.html -->
+{% extends 'blog/main.html' %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block content %}
+  <div class="post-detail-entry">
+    <div class="card" style="width: 50rem;">
+  <div class="card-body">
+    <h2 class="card-title">{{ post.title }}</h2>
+    <p class="card-text">{{ post.body }}</p>
+    <a href="{% url 'blog:blog_home' %}" class="card-link">Go back</a>
+  </div>
+</div>
+  </div>
+ 
+{% endblock content %}

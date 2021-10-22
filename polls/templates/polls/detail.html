@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1><p style="color:white"> {{ questions.question_text }}</h1>
+
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+ <div class="card" style="width: 40rem;">
+            <ul><div class="card-body">
+<form action="{% url 'polls:vote' questions.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in questions.choice_set.all %}
+    <div class="mb-3 fs-3">
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+        <label for="choice{{ forloop.counter }}"> {{ choice.choice_text }}</label>
+    </div>
+    <div class="my-1">
+        <a class="btn btn-primary" style="color: white;" onclick="document.location='../../polls/{{ choice.id }}/choice_update'">Update choice</a>
+    </div>
+    <div class="my-1">
+        <a class="btn btn-danger" style="width: auto; color: white; margin-bottom: 5%" onclick="document.location='../../polls/{{ choice.id }}/delete_choice'">Delete choice</a>
+    </div>
+    {% endfor %}
+    <input type="submit" value="Vote">
+    <a href="{% url 'polls:question_update' questions.id %}" class="btn btn-primary" style="margin: 1%;">Update question</a>
+</form>
+            </div>
+                </ul>
+ </div>
+{% endblock content %}

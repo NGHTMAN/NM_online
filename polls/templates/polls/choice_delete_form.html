@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete{% endblock %}
+{% block content %}
+
+<h1><p align="left" style="color:white" class="p-3">Delete?<br>
+</h1>
+<h5 class="px-5" style="color:white">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Delete choice?"{{ choice.choice_text }}"?</p>
+        <button class="btn btn-primary" type="submit">Yes</button>
+    </form>
+</h5>
+
+{% endblock content %}
